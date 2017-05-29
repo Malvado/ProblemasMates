@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class problema40 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+      //Enunciado
+		System.out.println("Shalma vive en un poblado de Kenia y debe caminar hasta el poblado vecino para ir a la escuela.");
+		System.out.println("En la primera media hora recorre un cuarto del trayecto, y en la media hora siguiente, dos quintos del trayecto restante, quedándole todavía 4.5 kilómetros por recorrer.");
+		System.out.println("¿A qué distancia se encuentra la escuela?");
+		Scanner datos=new Scanner(System.in);
+		System.out.print("Introduce el valor en decimal de los kilómetros recorridos en el primer trayecto: ");
+		float pt=datos.nextFloat();
+		double st;
+		System.out.println("En el segundo trayecto realiza dos quintos del trayecto restante, es decir "+(st=(0.4*(1-pt)))+" Kilómetros");
+		System.out.print("Introducen los kilómetros que especifica el enunciado que quedan aún: ");
+		double restante=datos.nextDouble();
+		double formula=(restante+((restante*(pt+st))/(1-(pt+st))));
+		System.out.println("El resultado final del problema es: "+formula+" kilómetros ");		
+	}
+}
